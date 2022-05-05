@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package restartpb;
+option go_package = "github.com/joakimofv/restartpb;restartpb";
+
+service Restart {
+	rpc Restart (RestartRequest) returns (RestartResponse) {}
+	rpc Terminate (TerminateRequest) returns (TerminateResponse) {}
+	rpc Crash (CrashRequest) returns (CrashResponse) {}
+}
+
+message RestartRequest {}
+message RestartResponse {}
+message TerminateRequest {}
+message TerminateResponse {}
+message CrashRequest {}
+message CrashResponse {}
